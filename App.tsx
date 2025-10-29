@@ -3,6 +3,7 @@ import { CalculationResult } from './types';
 import { CalculatorForm } from './components/CalculatorForm';
 import { ResultsDisplay } from './components/ResultsDisplay';
 import { ThemeToggle } from './components/ThemeToggle';
+import { AdsenseAd } from './components/AdsenseAd';
 import { Sun, Moon, Calendar, Gift } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -67,9 +68,15 @@ const App: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-10 transition-shadow duration-300">
             <CalculatorForm onCalculate={handleCalculate} onClear={handleClear} hasResult={!!result} />
           </div>
+
+          {/* Ad Placeholder 1: Replace YOUR_AD_SLOT_ID_1 with your actual Ad unit Slot ID */}
+          <AdsenseAd slot="YOUR_AD_SLOT_ID_1" />
           
           {result && <ResultsDisplay result={result} />}
         </div>
+
+        {/* Ad Placeholder 2: Replace YOUR_AD_SLOT_ID_2 with your actual Ad unit Slot ID */}
+        <AdsenseAd slot="YOUR_AD_SLOT_ID_2" />
         
         <footer className="text-center mt-12 text-gray-500 dark:text-gray-400 text-sm">
             <p>&copy; {new Date().getFullYear()} ChronoCraft. Crafted with precision and care.</p>
